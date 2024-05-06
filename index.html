@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Reminder App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <h1>Medication Reminder</h1>
+        <div class="add-medication">
+            <input type="text" id="med-name" placeholder="Medication Name">
+            <input type="time" id="med-time">
+            <button onclick="addOrUpdateMedication()">Add/Update Medication</button>
+        </div>
+        <ul id="med-list"></ul>
+        <audio id="alert-sound" src="alert.mp3" type="audio/mp3"></audio>
+    </div>
+    <script>
+        // Firebase configuration
+          const firebaseConfig = {
+        apiKey: "AIzaSyCEc-ErEgwc_CmMBu9Mx9AJCIOT9_m6yOE",
+        authDomain: "paymentrecords-c578a.firebaseapp.com",
+        databaseURL: "https://paymentrecords-c578a-default-rtdb.firebaseio.com",
+        projectId: "paymentrecords-c578a",
+        storageBucket: "paymentrecords-c578a.appspot.com",
+        messagingSenderId: "681484119496",
+        appId: "1:681484119496:web:295f3737cd2eb0145664fd"
+      };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
